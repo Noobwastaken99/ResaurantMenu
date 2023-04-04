@@ -4,13 +4,11 @@ import java.util.*;
 import java.util.Scanner;
 
 public class Menu {
-    private ArrayList<String> items = new ArrayList<>();
-    private Date updated;
-    // last updated and holding menu items
+    private HashMap<Integer, MenuItem> items;
+//    private ArrayList<String> items = new ArrayList<>();
+    private Date lastUpdated;
 
-    // method that returns when it is last updated (by date)
+    public void setItems(HashMap<Integer, MenuItem> items) {
 
-    // method that holds original menu items
-
-    // method that creates new menu items
+    }
 }

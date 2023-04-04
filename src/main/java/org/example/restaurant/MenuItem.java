@@ -1,7 +1,7 @@
 package org.example.restaurant;
 
 public class MenuItem {
-
+    private String name;
     private double price = 999;
     private String description = "None";
     private String category = "N/A";
