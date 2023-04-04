@@ -8,7 +8,7 @@ public class Menu {
     private Date updated;
     // last updated and holding menu items
 
-    // method that returns when it is last updated (by item)
+    // method that returns when it is last updated (by date)
 
     // method that holds original menu items
 
