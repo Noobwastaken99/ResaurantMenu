@@ -1,31 +1,35 @@
 package org.example.restaurant;
-import java.sql.Date;
+import java.util.Date;
 import java.util.*;
 import java.util.Scanner;
 
 public class Menu {
-    private HashMap<Integer, MenuItem> items;
-//    private ArrayList<String> items = new ArrayList<>();
+    private ArrayList<MenuItem> items;
     private Date lastUpdated;
 
-    public Menu(HashMap<Integer, MenuItem> items) {
+    public Menu(ArrayList<MenuItem> items) {
+        this.lastUpdated = new Date();
         this.items = items;
     }
-    public void setItems(HashMap<Integer, MenuItem> items) {
+    public void setItems(ArrayList<MenuItem> items) {
+        this.lastUpdated = new Date();
         this.items = items;
     }
-    public void printMenu() {
-        System.out.println();
+    public ArrayList<MenuItem> getItems() {
+        return items;
     }
-    public void addNewItem(Integer id, MenuItem item) {
-        this.items.put(id, item);
+    public void addMenuItem(MenuItem menuItem) {
+        this.lastUpdated = new Date();
+        this.items.add(menuItem);
     }
-    @Override
-    public String toString() {
-//        for (Object i : items.values()) {
-//            return i;
-//        }
-        return items.values().toString();
+    public void removeMenuItem(MenuItem menuItem) {
+        this.lastUpdated = new Date();
+        this.items.remove(menuItem);
     }
-
+    public Date getLastUpdated() {
+        return lastUpdated;
+    }
+    public void printFullMenu() {
+        this.items.forEach((menuItem) -> System.out.println(menuItem.toString()));
+    }
 }
